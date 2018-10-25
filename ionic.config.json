@@ -1,0 +1,7 @@
+{
+  "name": "Fairytrail",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
