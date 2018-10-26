@@ -1,16 +1,58 @@
-// http://ionicframework.com/docs/theming/
+.menuHeader {
+  text-align: center;
+}
+.callToAction-button{
+  display: block;
+  margin: auto;
+  width:90%;
+}
 
+#photoWrapper{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background: #ffffff !important;
+}
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+img[src="http://maps.gstatic.com/mapfiles/google_white.png"] {
+  display: none !important;
+}
+
+* {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.callToAction-button{
+  margin-bottom: 20px;
+}
+
+#avatar{
+  border-radius: 50%;
+}
+
+.ava{
+  margin: 10px;
+  border: 3px solid gold;
+  //border-image-source: linear-gradient(gold, yellow);
+  //border-image-slice: 20;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  height: 73px;
+  width: 73px;
+  float: left;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75) inset;
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75) inset;
+}
+.ava img{
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  //z-index: -1;
+}
+
+.authButtons{
+  margin-top: 30px;
+}

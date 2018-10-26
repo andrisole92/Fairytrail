@@ -1,16 +1,32 @@
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menu</ion-title>
+      <ion-title class="menuHeader">FairyTrail</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+    <div id="photoWrapper" *ngIf="avatarUrl !== null">
+      <div class='ava'>
+        <img id="avatar" src="{{avatarUrl}}"/>
+      </div>
+    </div>
+
+    <div class="authButtons" *ngIf="currentUser === null">
+      <button class="callToAction-button" ion-button icon-start (click)="facebook()">
+        <ion-icon name="logo-facebook"></ion-icon>
+        Facebook
       </button>
-    </ion-list>
+      <button color="danger" class="callToAction-button" ion-button icon-start (click)="googleAuth()">
+        <ion-icon name="logo-googleplus"></ion-icon>
+        Google +
+      </button>
+    </div>
+
+    <!--<button *ngIf="currentUser === null" color="secondary" class="callToAction-button" (click)="login()" ion-button>Sign In</button>-->
+    <button *ngIf="currentUser !== null" color="danger" class="callToAction-button" (click)="logout()" ion-button>Sign
+      Out
+    </button>
   </ion-content>
 
 </ion-menu>
