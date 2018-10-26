@@ -1,6 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {LocationProvider} from "../../providers/location/location"
 import {MapsAPILoader} from '@agm/core';
 import {AngularFireAuth} from 'angularfire2/auth';
 import HTMLMarker from "../../classes/HTMLMarker";
@@ -18,13 +17,10 @@ export class HomePage {
   @ViewChild('myElement') myElem;
   private animator: AnimationBuilder;
   map: any = null;
-  location: any;
   currentPosition: any = null;
-  myLocationMarker: any = null;
   hState: string = 'inactive';
 
   constructor(public navCtrl: NavController,
-              public locationService: LocationProvider,
               private mapsAPILoader: MapsAPILoader,
               public afAuth: AngularFireAuth,animationService: AnimationService) {
     this.animator = animationService.builder();

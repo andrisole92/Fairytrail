@@ -7,15 +7,10 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { LocationProvider } from '../providers/location/location';
 import {AgmCoreModule} from "@agm/core";
-import {AddParkingPage} from "../pages/add-parking/add-parking";
-import {ParkingLotPage} from "../pages/parking-lot/parking-lot";
-import {environment} from "../environments/environment";
 import {AngularFireModule} from "angularfire2";
 import {AngularFireDatabase, AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireAuthModule} from "angularfire2/auth";
@@ -25,16 +20,14 @@ import { BookingsProvider } from '../providers/bookings/bookings';
 import {AnimatesDirective, AnimationService} from "css-animator";
 import { AnimatorModule } from 'css-animator';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import {environment} from "../environments/environment";
 
 
 
 @NgModule({
   declarations: [
     MyApp,
-    AddParkingPage,
     HomePage,
-    ParkingLotPage,
-    ListPage,
   ],
   imports: [
     BrowserModule,
@@ -55,18 +48,13 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AddParkingPage,
     HomePage,
-    ParkingLotPage,
-    ListPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LocationProvider,
-    BookingsProvider,
     InAppBrowser
   ]
 })
