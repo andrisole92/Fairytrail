@@ -1,4 +1,4 @@
-import {Component, Input, ViewChild} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {Nav, Platform} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
@@ -8,7 +8,6 @@ import {Observable} from "rxjs/Observable";
 import {AngularFireAuth} from "angularfire2/auth";
 import {map} from "rxjs/internal/operators";
 import {auth} from "firebase";
-import {ParkingLotPage} from "../pages/parking-lot/parking-lot";
 import {HomePage} from "../pages/home/home";
 
 @Component({
@@ -84,9 +83,6 @@ export class MyApp {
 
   }
 
-  openLotPage(key: string) {
-    console.warn('openLotPage ', key);
-    this.nav.push(ParkingLotPage, {key})
-  }
+
 
 }

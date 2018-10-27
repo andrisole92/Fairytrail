@@ -1,27 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { ErrorHandler, NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import {ErrorHandler, NgModule} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
+import {IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import {MyApp} from './app.component';
+import {HomePage} from '../pages/home/home';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import {StatusBar} from '@ionic-native/status-bar';
+import {SplashScreen} from '@ionic-native/splash-screen';
 import {AgmCoreModule} from "@agm/core";
 import {AngularFireModule} from "angularfire2";
 import {AngularFireDatabase, AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireAuthModule} from "angularfire2/auth";
-import { AngularFireStorageModule } from 'angularfire2/storage';
+import {AngularFireStorageModule} from 'angularfire2/storage';
 
-import { BookingsProvider } from '../providers/bookings/bookings';
-import {AnimatesDirective, AnimationService} from "css-animator";
-import { AnimatorModule } from 'css-animator';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
+import {AnimatorModule} from 'css-animator';
+import {InAppBrowser} from '@ionic-native/in-app-browser';
 import {environment} from "../environments/environment";
-
 
 
 @NgModule({
@@ -58,4 +55,5 @@ import {environment} from "../environments/environment";
     InAppBrowser
   ]
 })
-export class AppModule {}
+export class AppModule {
+}
